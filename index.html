@@ -1,50 +1,33 @@
-<html>
-<link rel="stylesheet" href="index.html">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
     <script>
 
-        function Suma() {
-            var valorA = parseInt(prompt('Dame el valor A:'));
-            var valorB = parseInt(prompt('Dame valor B:'));
-            var resultado = valorA + valorB;
-            document.getElementById('resultado').value = (valorA + "  +  " + valorB + " = " + resultado);
+        Base = prompt('Ingrese el valor de la Base', '');
 
-        }
 
-        function Resta() {
-            var valorA = parseInt(prompt('Dame el valor A:'));
-            var valorB = parseInt(prompt('Dame valor B:'));
-            var resultado = valorA - valorB;
-            document.getElementById('resultado').value = (valorA + "  +  " + valorB + " = " + resultado);
-        }
+        Altura = prompt('Ingrese el valor de la Altura', '');
 
-        function Division() {
-            var valorA = parseInt(prompt('Dame el valor A:'));
-            var valorB = parseInt(prompt('Dame valor B:'));
-            var resultado = valorA / valorB;
-            document.getElementById('resultado').value = (valorA + "  +  " + valorB + " = " + resultado);
-        }
 
-        function Multiplicacion() {
-            var valorA = parseInt(prompt('Dame el valor A:'));
-            var valorB = parseInt(prompt('Dame valor B:'));
-            var resultado = valorA * valorB;
-            document.getElementById('resultado').value = (valorA + "  +  " + valorB + " = " + resultado);
-        }	
+        Area = Base * Altura;
+
+
+        Perimetro = (2 * Altura) + (2 * Base);
+
+        alert("El Area del Rectangulo es: " + Area);
+        alert("El Perimetro del Rectangulo es:" + Perimetro);
+
     </script>
-    <title>Funciones de resta, división, suma y multiplicación</title>
-</head>
 
-<body>
-    <p>Resultado:
-        <input name="resultado" type="text" id="resultado" size="30" align="right" />
-    </p>
-    <input type="button" name="btn_suma" id="btn_suma" value="Suma" onClick="Suma()" />
-    <input type="button" name="btn_resta" id="btn_resta" value="Resta" onClick="Resta()" />
-    <input type="button" name="btn_multi" id="btn_multi" value="Division" onClick="Division()" />
-    <input type="button" name="btn_multi" id="btn_multi" value="Multiplicacion" onClick="Multiplicacion()" />
-    </p>
+
+
+
 </body>
-
 </html>
