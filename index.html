@@ -1,34 +1,68 @@
 <html>
+    <head>
+        <title>Área y perímetro de un círculo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script>
 
-<head>
-    <title>document</title>
-    <meta charset="UTF-8">
-</head>
-
-<body>
-
-    <script>
-        let nota1, nota2, nota3;
-        nota1 = prompt('Ingrese 1ra nota:');
-        nota2 = prompt('Ingrese 2da nota:');
-        nota3 = prompt('Ingrese 3ra nota:');
-        //Convertimos los 3 string en enteros
-        nota1 = parseInt(nota1);
-        nota2 = parseInt(nota2);
-        nota3 = parseInt(nota3);
-        let pro;
-        pro = (nota1 + nota2 + nota3) / 3;
-        if (pro >= 7) {
-            document.write('promocionado');
-        } else {
-            if (pro >= 4) {
-                document.write('regular');
-            } else {
-                document.write('reprobado');
-            }
-        }
-    </script>
-
-</body>
-
+function algoritmo()
+{
+    let area, circunferencia, perimetro, radio;
+    radio = parseFloat (document.formulario1.radio.value);
+    circunferencia=2.0*Math.PI*radio;
+    perimetro=circunferencia;
+    area=Math.PI*radio*radio;
+    document.formulario1.area.value = area;
+    document.formulario1.circunferencia.value = circunferencia;
+    document.formulario1.perimetro.value = perimetro;
+}
+        </script>
+    </head>
+    <body>
+        <form name="formulario1">
+            <table style="text-align: left; margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="radio">Ingresa el valor de radio:</label>
+                        </td>
+                        <td>
+                            <input name="radio" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2" rowspan="1">
+                            <input value="Procesar" type="button" onclick="algoritmo();" />
+                            <input type="reset" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="area">Valor de area:</label>
+                        </td>
+                        <td>
+                            <input name="area" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="circunferencia">Valor de circunferencia:</label>
+                        </td>
+                        <td>
+                            <input name="circunferencia" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="perimetro">Valor de perimetro:</label>
+                        </td>
+                        <td>
+                            <input name="perimetro" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
 </html>
+
+
