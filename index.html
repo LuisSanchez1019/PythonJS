@@ -8,16 +8,13 @@
 </head>
 <body>
     <script>
-        let cantidad,precio,desc,compra,pagar;
+        var centi, fare;
 
-        precio = parseFloat(prompt("ingrese el precio"));
-        cantidad = parseFloat(prompt("Ingresar cantidad"));
-     
-        comprar= precio*cantidad;
-        desc = comprar*0.15;
-        pagar=comprar-desc;
-        document.write("el descuento es de: "+desc)
-        document.write("<br>El total a pagar es: "+pagar)
+    centi = parseFloat(prompt("Ingresa grados centígrados"));
+    fare = (9/5*centi)+32;
+        
+        /**El resultado es visible por consola att:Luis :D**/
+    console.log(centi+" centígrados equivalen a "+fare+" farenheit");
     </script>
 </body>
 </html>
