@@ -1,22 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular Volumen de un cubo</title>
+    <title>Costo de una llamada en minutos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+
+        function algoritmo() {
+            let costo, duracion_en_minutos;
+            duracion_en_minutos = parseFloat(document.formulario1.duracion_en_minutos.value);
+            costo = 400 * duracion_en_minutos;
+            if (duracion_en_minutos > 5)
+                costo = costo + (duracion_en_minutos - 5) + 1.2;
+            document.formulario1.costo.value = costo;
+        }
+
+    </script>
 </head>
 
 <body>
-    <script>
-
-        var base = parseInt(prompt("Dime la base del triangulo"));
-        var altura = parseInt(prompt("Dime la altura del triangulo"));
-        alert("El area del triangulo es: " + ((base * altura) / 2));
-
-    </script>
-
+    <form name="formulario1">
+        <table style="text-align: left; margin-left: auto; margin-right: auto;">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="duracion_en_minutos"><b>duracion en minutos:</b></label>
+                    </td>
+                    <td>
+                        <input name="duracion_en_minutos" required="required" step="0.000001" type="number" />
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2" rowspan="1">
+                        <input value="Procesar" type="button" onclick="algoritmo();" />
+                        <input type="reset" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="costo"><b> Valor de la llamada:</b></label>
+                    </td>
+                    <td>
+                        <input name="costo" step="0.000001" type="number" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
 </body>
 
 </html>
