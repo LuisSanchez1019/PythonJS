@@ -1,30 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio Pyhton km ppor hora</title>
+    <title>Ejercicio 6 Luis Sanchez</title>
 </head>
 
 <body>
-    <h3>Realice un algoritmo que a partir de proporcionarle la velocidad de un automóvil, expresada en kilómetros por
-        hora, proporcione la velocidad en metros por segundo</h3>
-    <form action="">
-        <label for="">kilómetros por hora:</label>
-        <input type="number" id="kmporh"><br><br>
-        <input type="button" value="Convertir" onclick="convertir()">
-        <input type="reset" value="Limpiar"><br><br>
-        <label for="">resultado:</label><br>
-        <textarea name="" id="resultado" cols="30" rows="10"></textarea>
-    </form>
     <script>
-        function convertir() {
-            let velocidad = kmporh.value;
-            let convertir = velocidad * 0.277778;
-            document.getElementById('resultado').value = convertir.toFixed(2) + " metros por segundo";
-        }
+        let distancia = Number(prompt("Ingrese la distancia que recorre el proyectil"));
+        let tiempo = Number(prompt("Ingrese el tiempo que se demora recorriendo esa distancia"))
+        let velocidad = (distancia * 1000) / (tiempo * 60);
+        alert("La velocidad del proyectil es de: " + velocidad + " M/S")
     </script>
 </body>
 
