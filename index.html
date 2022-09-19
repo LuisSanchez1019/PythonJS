@@ -8,10 +8,16 @@
 </head>
 <body>
     <script>
+        let cantidad,precio,desc,compra,pagar;
 
-        let lado = parseFloat(prompt("lado: "));
-        volumen = lado * lado * lado;
-        document.write(volumen + " cm³");
+        precio = parseFloat(prompt("ingrese el precio"));
+        cantidad = parseFloat(prompt("Ingresar cantidad"));
+     
+        comprar= precio*cantidad;
+        desc = comprar*0.15;
+        pagar=comprar-desc;
+        document.write("el descuento es de: "+desc)
+        document.write("<br>El total a pagar es: "+pagar)
     </script>
 </body>
 </html>
