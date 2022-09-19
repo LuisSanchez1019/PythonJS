@@ -1,21 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Cálculo del salario de un empleado</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular Volumen de un cubo</title>
-</head>
+function algoritmo()
+{
+    let costo_normal, horas_trabajadas, salario;
+    costo_normal = parseFloat (document.formulario1.costo_normal.value);
+    horas_trabajadas = parseFloat (document.formulario1.horas_trabajadas.value);
+    salario=horas_trabajadas*costo_normal;
+    if(horas_trabajadas>40)
+        salario=salario+(horas_trabajadas-40)*costo_normal;
+    if(horas_trabajadas>48)
+        salario=salario+(horas_trabajadas-48)*costo_normal;
+    document.formulario1.salario.value = salario;
+}
 
-<body>
-    <script>
-        var precio = 100;
-        ivaQuenosDan = 15
-        var iva= precio*15/100
-        var precioconIva = precio+iva;
-        alert(precioconIva)
-    
-    </script>
-</body>
+        </script>
+    </head>
+    <body>
+        <form name="formulario1">
+            <table style="text-align: left; margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="costo_normal">Ingresa el valor de costo normal:</label>
+                        </td>
+                        <td>
+                            <input name="costo_normal" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="horas_trabajadas">Ingresa el valor de horas trabajadas:</label>
+                        </td>
+                        <td>
+                            <input name="horas_trabajadas" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2" rowspan="1">
+                            <input value="Procesar" type="button" onclick="algoritmo();" />
+                            <input type="reset" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="salario">Valor de salario:</label>
+                        </td>
+                        <td>
+                            <input name="salario" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
 </html>
