@@ -1,52 +1,31 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-    <title>Costo de una llamada en minutos</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script>
-
-        function algoritmo() {
-            let costo, duracion_en_minutos;
-            duracion_en_minutos = parseFloat(document.formulario1.duracion_en_minutos.value);
-            costo = 400 * duracion_en_minutos;
-            if (duracion_en_minutos > 5)
-                costo = costo + (duracion_en_minutos - 5) + 1.2;
-            document.formulario1.costo.value = costo;
-        }
-
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Pyhton km ppor hora</title>
 </head>
 
 <body>
-    <form name="formulario1">
-        <table style="text-align: left; margin-left: auto; margin-right: auto;">
-            <tbody>
-                <tr>
-                    <td>
-                        <label for="duracion_en_minutos"><b>duracion en minutos:</b></label>
-                    </td>
-                    <td>
-                        <input name="duracion_en_minutos" required="required" step="0.000001" type="number" />
-                    </td>
-                </tr>
-                <tr align="center">
-                    <td colspan="2" rowspan="1">
-                        <input value="Procesar" type="button" onclick="algoritmo();" />
-                        <input type="reset" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="costo"><b> Valor de la llamada:</b></label>
-                    </td>
-                    <td>
-                        <input name="costo" step="0.000001" type="number" />
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <h3>Realice un algoritmo que a partir de proporcionarle la velocidad de un automóvil, expresada en kilómetros por
+        hora, proporcione la velocidad en metros por segundo</h3>
+    <form action="">
+        <label for="">kilómetros por hora:</label>
+        <input type="number" id="kmporh"><br><br>
+        <input type="button" value="Convertir" onclick="convertir()">
+        <input type="reset" value="Limpiar"><br><br>
+        <label for="">resultado:</label><br>
+        <textarea name="" id="resultado" cols="30" rows="10"></textarea>
     </form>
+    <script>
+        function convertir() {
+            let velocidad = kmporh.value;
+            let convertir = velocidad * 0.277778;
+            document.getElementById('resultado').value = convertir.toFixed(2) + " metros por segundo";
+        }
+    </script>
 </body>
 
 </html>
